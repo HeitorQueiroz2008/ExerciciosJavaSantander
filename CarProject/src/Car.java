@@ -1,10 +1,67 @@
 public class Car {
 
+    //car variables
     private boolean started;
 
-    private String gear;
+    private int gear;
 
     private int speed;
+
+    //Métodos
+    public void accelerate(){
+        if (started){
+            if (gear == 1){
+                if(speed < 20){
+                    speed ++;
+                } else {
+                    System.out.println("Limite da 1ª marcha atingido! Engate a 2ª para acelerar.");
+                }
+            } else if (gear == 2){
+                if(speed < 40){
+                    speed ++;
+                } else {
+                    System.out.println("Limite da 2ª marcha atingido! Engate a 3ª para acelerar.");
+                }
+            } else if (gear == 3){
+                if(speed < 60){
+                    speed ++;
+                } else {
+                    System.out.println("Limite da 3ª marcha atingido! Engate a 4ª para acelerar.");
+                }
+            } else if (gear == 4){
+                if(speed < 80){
+                    speed ++;
+                } else {
+                    System.out.println("Limite da 4ª marcha atingido! Engate a 5ª para acelerar.");
+                }
+            } else if (gear == 5){
+                if(speed < 100){
+                    speed ++;
+                } else {
+                    System.out.println("Limite da 5ª marcha atingido! Engate a 6ª para acelerar.");
+                }
+            } else if (gear == 6){
+                if(speed < 120){
+                    speed ++;
+                } else {
+                    System.out.println("Limite do carro atingido!.");
+                }
+            } else {
+                System.out.println("Neutro engatado! Engate a 1ª para acelerar");
+            }
+
+
+        }
+    }
+
+
+    //builder
+    public Car(){
+        started = false;
+        gear = 0;
+        speed = 0;
+    }
+
 
 
 }
