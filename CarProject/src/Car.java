@@ -8,6 +8,14 @@ public class Car {
     private int speed;
 
     //Métodos
+    public void increaceGear(){
+        gear ++;
+    }
+
+    public void decraceGear(){
+        gear --;
+    }
+
     public void accelerate(){
         if (started){
             if (gear == 1){
