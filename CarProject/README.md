@@ -36,8 +36,8 @@ Criar um sistema capaz de controlar as funções básicas de um carro, permitind
 
 ## Funcionalidades Implementadas
 
-- [ ] Ligar carro
-- [ ] Desligar carro
+- [x] Ligar carro
+- [x] Desligar carro
 - [x] Acelerar
 - [ ] Diminuir velocidade
 - [x] Trocar marchas
