@@ -21,6 +21,24 @@ public class Main {
             if (answer == 2) {
                 car1.increaceGear();
             }
+
+            if (answer == 3) {
+                car1.decraceGear();
+            }
+
+            if (answer == 4) {
+                car1.accelerate();
+            }
+
+            if (answer == 5) {
+                car1.slowDownCar();
+            }
+
+            if (answer == 0) {
+                System.out.println("Encerrando...");
+                break;
+            }
+
         }
 
     }
