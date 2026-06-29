@@ -17,11 +17,24 @@ public class Car {
     }
 
     public void increaceGear() {
-        gear++;
+        if (getSpeed() == 20 ||getSpeed() == 40 ||getSpeed() == 60 ||getSpeed() == 80) {
+            gear++;
+        } else if (getSpeed() > 100){
+            System.out.println("Marcha máxima alcançada!");
+        } else {
+            System.out.println("Chegue na velocidade limite da marcha atual para passar de marcha");
+        }
+
     }
 
     public void decraceGear() {
-        gear--;
+        if (getSpeed() == 1 || getSpeed() == 21 ||getSpeed() == 60 ||getSpeed() == 80 ||getSpeed() == 100) {
+            gear--;
+        } else if (getSpeed() < 20){
+            System.out.println("Marcha máxima alcançada!");
+        } else {
+            System.out.println("Chegue na velocidade limite da marcha atual para passar de marcha");
+        }
     }
 
     public void accelerate() {
@@ -115,6 +128,34 @@ public class Car {
             }
         }
     }
+
+    //Getters and Setters
+
+
+    public boolean getStarted() {
+        return started;
+    }
+
+    public void setStarted(boolean started) {
+        this.started = started;
+    }
+
+    public int getGear() {
+        return gear;
+    }
+
+    public void setGear(int gear) {
+        this.gear = gear;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
     //builder
     public Car(){
         started = false;

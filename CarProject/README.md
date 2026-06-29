@@ -39,7 +39,7 @@ Criar um sistema capaz de controlar as funções básicas de um carro, permitind
 - [x] Ligar carro
 - [x] Desligar carro
 - [x] Acelerar
-- [ ] Diminuir velocidade
+- [x] Diminuir velocidade
 - [x] Trocar marchas
 - [ ] Virar para esquerda
 - [ ] Virar para direita
