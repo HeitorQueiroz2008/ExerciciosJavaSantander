@@ -15,20 +15,11 @@ public class Main {
             var answer = scanner.nextInt();
 
             if (answer == 1) {
-                if (car1.getStarted()){
-                    if (car1.getSpeed() == 0) {
-                        car1.setStarted(false);
-                        System.out.println("Você desligou o carro!");
-                    } else {
-                        System.out.println("Pare o carro para desligá-lo");
-                    }
-                } else {
-                    car1.setStarted(true);
-                }
+                car1.turnOnOffCar();
             }
 
-            if (answer == 2){
-
+            if (answer == 2) {
+                car1.increaceGear();
             }
         }
 

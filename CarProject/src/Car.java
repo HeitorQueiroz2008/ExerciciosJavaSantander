@@ -8,18 +8,30 @@ public class Car {
     private int speed;
 
     //Métodos
-    public void startCar() {
-        started = true;
-    }
 
-    public void turnOffCar() {
-        started = false;
+
+    public void turnOnOffCar() {
+        if (getStarted()) {
+            if (getSpeed() == 0) {
+                setStarted(false);
+                System.out.println("Você desligou o carro!");
+            } else {
+                System.out.println("Pare o carro para desligá-lo");
+            }
+        } else {
+            setStarted(true);
+            System.out.println("Você ligou o carro!");
+
+        }
     }
 
     public void increaceGear() {
-        if (getSpeed() == 20 ||getSpeed() == 40 ||getSpeed() == 60 ||getSpeed() == 80) {
+        if (!getStarted()) {
+            System.out.println("Ligue o carro para continuar!");
+        } else if (getSpeed() == 20 || getSpeed() == 40 || getSpeed() == 60 || getSpeed() == 80) {
             gear++;
-        } else if (getSpeed() > 100){
+            System.out.printf("Marcha passada! Sua marcha atual: %sª", getGear());
+        } else if (getSpeed() > 100) {
             System.out.println("Marcha máxima alcançada!");
         } else {
             System.out.println("Chegue na velocidade limite da marcha atual para passar de marcha");
@@ -28,9 +40,11 @@ public class Car {
     }
 
     public void decraceGear() {
-        if (getSpeed() == 1 || getSpeed() == 21 ||getSpeed() == 60 ||getSpeed() == 80 ||getSpeed() == 100) {
+        if (!getStarted()) {
+            System.out.println("Ligue o carro para continuar!");
+        } else if (getSpeed() == 1 || getSpeed() == 21 || getSpeed() == 60 || getSpeed() == 80 || getSpeed() == 100) {
             gear--;
-        } else if (getSpeed() < 20){
+        } else if (getSpeed() < 20) {
             System.out.println("Marcha máxima alcançada!");
         } else {
             System.out.println("Chegue na velocidade limite da marcha atual para passar de marcha");
@@ -38,98 +52,97 @@ public class Car {
     }
 
     public void accelerate() {
-        if (started) {
-            if (gear == 1) {
-                if (speed < 20) {
-                    speed++;
-                } else {
-                    System.out.println("Limite da 1ª marcha atingido! Engate a 2ª para acelerar.");
-                }
-            } else if (gear == 2) {
-                if (speed < 40) {
-                    speed++;
-                } else {
-                    System.out.println("Limite da 2ª marcha atingido! Engate a 3ª para acelerar.");
-                }
-            } else if (gear == 3) {
-                if (speed < 60) {
-                    speed++;
-                } else {
-                    System.out.println("Limite da 3ª marcha atingido! Engate a 4ª para acelerar.");
-                }
-            } else if (gear == 4) {
-                if (speed < 80) {
-                    speed++;
-                } else {
-                    System.out.println("Limite da 4ª marcha atingido! Engate a 5ª para acelerar.");
-                }
-            } else if (gear == 5) {
-                if (speed < 100) {
-                    speed++;
-                } else {
-                    System.out.println("Limite da 5ª marcha atingido! Engate a 6ª para acelerar.");
-                }
-            } else if (gear == 6) {
-                if (speed < 120) {
-                    speed++;
-                } else {
-                    System.out.println("Limite do carro atingido!.");
-                }
+        if (!getStarted()) {
+            System.out.println("Ligue o carro para continuar!");
+        } else if (gear == 1) {
+            if (speed < 20) {
+                speed++;
             } else {
-                System.out.println("Neutro engatado! Engate a 1ª para acelerar");
+                System.out.println("Limite da 1ª marcha atingido! Engate a 2ª para acelerar.");
             }
-
+        } else if (gear == 2) {
+            if (speed < 40) {
+                speed++;
+            } else {
+                System.out.println("Limite da 2ª marcha atingido! Engate a 3ª para acelerar.");
+            }
+        } else if (gear == 3) {
+            if (speed < 60) {
+                speed++;
+            } else {
+                System.out.println("Limite da 3ª marcha atingido! Engate a 4ª para acelerar.");
+            }
+        } else if (gear == 4) {
+            if (speed < 80) {
+                speed++;
+            } else {
+                System.out.println("Limite da 4ª marcha atingido! Engate a 5ª para acelerar.");
+            }
+        } else if (gear == 5) {
+            if (speed < 100) {
+                speed++;
+            } else {
+                System.out.println("Limite da 5ª marcha atingido! Engate a 6ª para acelerar.");
+            }
+        } else if (gear == 6) {
+            if (speed < 120) {
+                speed++;
+            } else {
+                System.out.println("Limite do carro atingido!.");
+            }
         } else {
-            System.out.println("Ligue o carro para acelerar!");
+            System.out.println("Neutro engatado! Engate a 1ª para acelerar");
         }
 
     }
+
 
     public void slowDownCar() {
-        if (started) {
-            if (gear == 6) {
-                if (speed > 100) {
-                    speed--;
-                } else {
-                    System.out.println("Limite da 6ª marcha atingido! Engate a 5ª para desacelerar.");
-                }
-            } else if (gear == 5) {
-                if (speed > 80) {
-                    speed--;
-                } else {
-                    System.out.println("Limite da 5ª marcha atingido! Engate a 4ª para desacelerar.");
-                }
-            } else if (gear == 4) {
-                if (speed > 60) {
-                    speed--;
-                } else {
-                    System.out.println("Limite da 4ª marcha atingido! Engate a 3ª para desacelerar.");
-                }
-            } else if (gear == 3) {
-                if (speed > 40) {
-                    speed--;
-                } else {
-                    System.out.println("Limite da 3ª marcha atingido! Engate a 2ª para desacelerar.");
-                }
-            } else if (gear == 2) {
-                if (speed > 20) {
-                    speed--;
-                } else {
-                    System.out.println("Limite da 2ª marcha atingido! Engate a 1ª para desacelerar.");
-                }
-            } else if (gear == 1) {
-                if (speed > 0) {
-                    speed--;
-                } else {
-                    System.out.println("Carro está parado!.");
-                }
+        if (!getStarted()) {
+            System.out.println("Ligue o carro para continuar!");
+        } else if (gear == 6) {
+            if (speed > 100) {
+                speed--;
             } else {
-                System.out.println("Neutro engatado!");
+                System.out.println("Limite da 6ª marcha atingido! Engate a 5ª para desacelerar.");
             }
+        } else if (gear == 5) {
+            if (speed > 80) {
+                speed--;
+            } else {
+                System.out.println("Limite da 5ª marcha atingido! Engate a 4ª para desacelerar.");
+            }
+        } else if (gear == 4) {
+            if (speed > 60) {
+                speed--;
+            } else {
+                System.out.println("Limite da 4ª marcha atingido! Engate a 3ª para desacelerar.");
+            }
+        } else if (gear == 3) {
+            if (speed > 40) {
+                speed--;
+            } else {
+                System.out.println("Limite da 3ª marcha atingido! Engate a 2ª para desacelerar.");
+            }
+        } else if (gear == 2) {
+            if (speed > 20) {
+                speed--;
+            } else {
+                System.out.println("Limite da 2ª marcha atingido! Engate a 1ª para desacelerar.");
+            }
+        } else if (gear == 1) {
+            if (speed > 0) {
+                speed--;
+            } else {
+                System.out.println("Carro está parado!.");
+            }
+        } else {
+            System.out.println("Neutro engatado!");
         }
     }
 
-    //Getters and Setters
+
+//Getters and Setters
 
 
     public boolean getStarted() {
@@ -157,7 +170,7 @@ public class Car {
     }
 
     //builder
-    public Car(){
+    public Car() {
         started = false;
         gear = 0;
         speed = 0;
