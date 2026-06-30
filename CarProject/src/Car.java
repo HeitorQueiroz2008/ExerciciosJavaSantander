@@ -169,7 +169,7 @@ public class Car {
     public int getGear() {
         return gear;
     }
-    
+
     public int getSpeed() {
         return speed;
     }

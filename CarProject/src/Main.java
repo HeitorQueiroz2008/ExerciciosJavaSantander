@@ -34,6 +34,14 @@ public class Main {
                 car1.slowDownCar();
             }
 
+            if (answer == 6){
+                System.out.println("Virando para a esquerda...");
+            }
+
+            if (answer == 7){
+                System.out.println("Virando para a direita...");
+            }
+
             if (answer == 0) {
                 System.out.println("Encerrando...");
                 break;
