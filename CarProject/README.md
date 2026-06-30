@@ -41,11 +41,10 @@ Criar um sistema capaz de controlar as funções básicas de um carro, permitind
 - [x] Acelerar
 - [x] Diminuir velocidade
 - [x] Trocar marchas
-- [ ] Virar para esquerda
-- [ ] Virar para direita
-- [ ] Consultar velocidade
-- [ ] Menu interativo
-- [ ] Encerrar aplicação
+- [x] Virar para esquerda
+- [x] Virar para direita
+- [x] Menu interativo
+- [x] Encerrar aplicação
 
 ## Conceitos Praticados
 
