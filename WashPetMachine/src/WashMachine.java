@@ -38,7 +38,11 @@ public class WashMachine {
         }
     }
 
-  
+    public void cleanMachine(){
+        if (isDirt) {
+
+        }
+    }
 
     public void giveWash(){
         if (waterLevel >= 10 && shampooLevel >= 2){
@@ -52,28 +56,22 @@ public class WashMachine {
         }
     }
 
-    public void refillWater (int refill){
-        refill = scanner.nextInt();
+    public void refillWater (){
 
-        if ((refill + waterLevel) < 30) {
-            waterLevel += refill;
+        if ((waterLevel) < 29) {
+            waterLevel += 2;
             System.out.printf("Água abastecida! \nNível atual: %s L\n", waterLevel);
-        } else if (refill <= 0){
-            System.out.println("Abasteça com valor positivo!");
         } else {
             waterLevel = 30;
             System.out.println("Limite máximo de água alcançado!\nNível atual: 30 L");
         }
     }
 
-    public void refillShampoo(int refill){
-        refill = scanner.nextInt();
+    public void refillShampoo(){
 
-        if ((refill + shampooLevel) < 10) {
-            shampooLevel += refill;
+        if ((shampooLevel) < 9) {
+            shampooLevel += 2;
             System.out.printf("Shampoo abastecido! \nNível atual: %s L\n", shampooLevel);
-        } else if (refill <= 0){
-            System.out.println("Abasteça com valor positivo!");
         } else {
             shampooLevel = 10;
             System.out.println("Limite máximo de shampoo alcançado!\nNível atual: 10 L");
