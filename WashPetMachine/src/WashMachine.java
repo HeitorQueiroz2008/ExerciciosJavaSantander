@@ -15,18 +15,36 @@ public class WashMachine {
 
     //Métodos
     public void addPet(){
-        if (!isFull){
+        if (!isFull && !isDirt){
             isFull = true;
+            isDirt = true;
             System.out.println("O pet foi adicionado à máquina!");
-        } else {
+        } else if (isFull){
             System.out.println("A máquina já está ocupada!");
+        } else {
+            System.out.println("A máquina está suja!\nlimpe-a para usar");
         }
     }
+
+    public void takeOffPet(){
+        if (isFull){
+            isFull = false;
+            System.out.println("O pet foi retirado da máquina!");
+            if (isDirt){
+                System.out.println("Você sujou a máquina!\nLimpe-a para continuar usando...");
+            }
+        } else {
+            System.out.println("A máquina já está vazia!");
+        }
+    }
+
+  
 
     public void giveWash(){
         if (waterLevel >= 10 && shampooLevel >= 2){
             waterLevel -= 10;
             shampooLevel -= 10;
+            isDirt = false;
             System.out.println("Pet limpo com sucesso! Retire-o da máquina");
         } else {
             System.out.println("Recursos insuficientes! Verifique os níveis de água e shampoo para continuar com a limpeza...");
