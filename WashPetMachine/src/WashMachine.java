@@ -40,7 +40,16 @@ public class WashMachine {
 
     public void cleanMachine(){
         if (isDirt) {
-
+            if (waterLevel >= 3 && shampooLevel >= 1){
+                waterLevel -= 3;
+                shampooLevel -= 1;
+                isDirt = false;
+                System.out.printf("A máquina foi limpa!\nNível atual de água: %s L\nNível atual de shampoo: %s L\n", waterLevel, shampooLevel);
+            } else {
+                System.out.printf("Sem recursos suficiente. Abasteça!\\nNível atual de água: %s L\\nNível atual de shampoo: %s L\n", waterLevel, shampooLevel);
+            }
+        } else {
+            System.out.println("A máquina já está limpa!");
         }
     }
 
