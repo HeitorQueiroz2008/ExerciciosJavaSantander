@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 public class WashMachine {
 
     //Variáveis
+    Scanner scanner = new Scanner(System.in);
+
     private boolean isFull;
 
     private boolean isDirt;
@@ -30,6 +34,34 @@ public class WashMachine {
         }
     }
 
+    public void refillWater (int refill){
+        refill = scanner.nextInt();
+
+        if ((refill + waterLevel) < 30) {
+            waterLevel += refill;
+            System.out.printf("Água abastecida! \nNível atual: %s L\n", waterLevel);
+        } else if (refill <= 0){
+            System.out.println("Abasteça com valor positivo!");
+        } else {
+            waterLevel = 30;
+            System.out.println("Limite máximo de água alcançado!\nNível atual: 30 L");
+        }
+    }
+
+    public void refillShampoo(int refill){
+        refill = scanner.nextInt();
+
+        if ((refill + shampooLevel) < 10) {
+            shampooLevel += refill;
+            System.out.printf("Shampoo abastecido! \nNível atual: %s L\n", shampooLevel);
+        } else if (refill <= 0){
+            System.out.println("Abasteça com valor positivo!");
+        } else {
+            shampooLevel = 10;
+            System.out.println("Limite máximo de shampoo alcançado!\nNível atual: 10 L");
+        }
+    }
+
     //Getters e Setters
 
 
@@ -37,16 +69,8 @@ public class WashMachine {
         return waterLevel;
     }
 
-    public void setWaterLevel(int waterLevel) {
-        this.waterLevel = waterLevel;
-    }
-
     public int getShampooLevel() {
         return shampooLevel;
-    }
-
-    public void setShampooLevel(int shampooLevel) {
-        this.shampooLevel = shampooLevel;
     }
 
     //Builder
