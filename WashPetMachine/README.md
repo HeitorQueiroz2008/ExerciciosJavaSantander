@@ -29,17 +29,17 @@ Criar um sistema capaz de controlar uma máquina de banho para um petshop, permi
 
 ## Funcionalidades Implementadas
 
-- [ ] Colocar pet na máquina
-- [ ] Retirar pet da máquina
-- [ ] Dar banho no pet
-- [ ] Abastecer água
-- [ ] Abastecer shampoo
-- [ ] Verificar nível de água
-- [ ] Verificar nível de shampoo
-- [ ] Verificar presença de pet
-- [ ] Limpar máquina
-- [ ] Menu interativo
-- [ ] Encerrar aplicação
+- [x] Colocar pet na máquina
+- [x] Retirar pet da máquina
+- [x] Dar banho no pet
+- [x] Abastecer água
+- [x] Abastecer shampoo
+- [x] Verificar nível de água
+- [x] Verificar nível de shampoo
+- [x] Verificar presença de pet
+- [x] Limpar máquina
+- [x] Menu interativo
+- [x] Encerrar aplicação
 
 ## Conceitos Praticados
 
