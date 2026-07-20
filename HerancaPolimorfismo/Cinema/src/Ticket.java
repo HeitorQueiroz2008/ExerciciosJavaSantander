@@ -7,6 +7,8 @@ public sealed class Ticket permits HalfpriceTicket, FamilyTicket {
 
     protected boolean isDubbed;
 
+    protected double finalValue;
+
     protected int people;
 
     //Getters e Setters
@@ -24,6 +26,8 @@ public sealed class Ticket permits HalfpriceTicket, FamilyTicket {
         this.people = people;
     }
 
+    public void setFinalValue(double finalValue) { this.finalValue = finalValue; }
+
     public double getBaseValue() {
         return baseValue;
     }
@@ -35,4 +39,6 @@ public sealed class Ticket permits HalfpriceTicket, FamilyTicket {
     public int getPeople() {
         return people;
     }
+
+    public double getFinalValue() { return finalValue; }
 }
