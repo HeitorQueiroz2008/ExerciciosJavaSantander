@@ -1,4 +1,4 @@
-public sealed class Ticket permits HalfpriceTicket, FamilyTicket {
+public sealed class Ticket permits HalfpriceTicket{
 
     //Variáveis
     protected double baseValue;
@@ -26,7 +26,7 @@ public sealed class Ticket permits HalfpriceTicket, FamilyTicket {
         this.people = people;
     }
 
-    public void setFinalValue(double finalValue) { this.finalValue = finalValue; }
+    public void calculeFinalValue() { this.finalValue = baseValue; }
 
     public double getBaseValue() {
         return baseValue;

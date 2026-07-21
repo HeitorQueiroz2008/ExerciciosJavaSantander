@@ -1,6 +1,6 @@
 public final class HalfpriceTicket extends Ticket{
     @Override
-    public void setFinalValue(double finalValue) {
-        finalValue = baseValue * 0.5;
+    public void calculeFinalValue() {
+        this.finalValue = baseValue * 0.5;
     }
 }

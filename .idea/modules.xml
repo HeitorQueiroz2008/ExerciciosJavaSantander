@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AbstracaoEncapsulamento/CarProject/CarProject.iml" filepath="$PROJECT_DIR$/AbstracaoEncapsulamento/CarProject/CarProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ExerciciosJavaSantander.iml" filepath="$PROJECT_DIR$/.idea/ExerciciosJavaSantander.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HerancaPolimorfismo/HerancaPolimorfismo.iml" filepath="$PROJECT_DIR$/HerancaPolimorfismo/HerancaPolimorfismo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AbstracaoEncapsulamento/WashPetMachine/WashPetMachine.iml" filepath="$PROJECT_DIR$/AbstracaoEncapsulamento/WashPetMachine/WashPetMachine.iml" />
+    </modules>
+  </component>
+</project>
