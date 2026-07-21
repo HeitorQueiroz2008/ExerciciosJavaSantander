@@ -1,13 +1,4 @@
 public final class FamilyTicket extends Ticket{
-    private int people;
-
-    public void setPeople(int people) {
-        this.people = people;
-    }
-
-    public int getPeople() {
-        return people;
-    }
 
     @Override
     public void calculateFinalValue() {
