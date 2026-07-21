@@ -1,4 +1,4 @@
-public sealed class Ticket permits HalfpriceTicket{
+public sealed class Ticket permits HalfpriceTicket, FamilyTicket{
 
     //Variáveis
     protected double baseValue;
