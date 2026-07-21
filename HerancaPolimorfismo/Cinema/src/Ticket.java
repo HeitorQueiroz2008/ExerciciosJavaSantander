@@ -26,7 +26,7 @@ public sealed class Ticket permits HalfpriceTicket, FamilyTicket{
         this.people = people;
     }
 
-    public void calculeFinalValue() { this.finalValue = baseValue; }
+    public void calculateFinalValue() { this.finalValue = baseValue; }
 
     public double getBaseValue() {
         return baseValue;

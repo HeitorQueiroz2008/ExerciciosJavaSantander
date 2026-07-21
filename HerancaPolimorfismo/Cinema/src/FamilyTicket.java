@@ -10,12 +10,12 @@ public final class FamilyTicket extends Ticket{
     }
 
     @Override
-    public void calculeFinalValue() {
+    public void calculateFinalValue() {
 
-        if (this.people > 3) {
-            this.finalValue = baseValue * 0.95;
-        } else if (this.people > 0){
-            this.finalValue = baseValue;
+        if (people > 3) {
+            finalValue = baseValue * 0.95 * people;
+        } else if (people > 0){
+            finalValue = baseValue * people;
         } else {
             System.out.println("Insira um valor válido!!!");
         }
