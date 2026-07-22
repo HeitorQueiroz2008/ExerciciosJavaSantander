@@ -1,15 +1,15 @@
 public sealed class Ticket permits HalfpriceTicket, FamilyTicket{
 
     //Variáveis
-    protected double baseValue;
+    private double baseValue;
 
-    protected String movieName;
+    private String movieName;
 
-    protected boolean isDubbed;
+    private boolean isDubbed;
 
-    protected double finalValue;
+    private double finalValue;
 
-    protected int people;
+    private int people;
 
     //Getters e Setters
     public void setBaseValue(double baseValue) {
@@ -24,6 +24,10 @@ public sealed class Ticket permits HalfpriceTicket, FamilyTicket{
 
     public void setPeople(int people) {
         this.people = people;
+    }
+
+    public void setFinalValue(double finalValue) {
+        this.finalValue = finalValue;
     }
 
     public void calculateFinalValue() { this.finalValue = baseValue; }

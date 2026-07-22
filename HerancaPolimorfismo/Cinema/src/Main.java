@@ -8,7 +8,7 @@ public class Main {
 
         while (true) {
             Ticket ticket = null;
-            System.out.println("Escolha o tipo de ingresso: \n[1]Comum\n[2]Meia-entrada\n[3]Família\n[4]Encerrar");
+            System.out.println("Escolha o tipo de ingresso: \n[1]Comum\n[2]Meia-entrada\n[3]Família\n[4]Encerrar\n");
             var choice = scanner.nextInt();
 
             if (choice == 1){
@@ -25,7 +25,22 @@ public class Main {
                 continue;
             }
 
+            System.out.println("Insira o nome do filme:");
+            ticket.setMovieName(scanner.next());
 
+            while (true) {
+                System.out.println("Dublado [1] ou Legendado [2]?:");
+                choice = scanner.nextInt();
+                if (choice == 1){
+                    ticket.setDubbed(true);
+                    break;
+                } else if (choice == 2){
+                    ticket.setDubbed(false);
+                    break;
+                } else {
+                    System.out.println("Digite um valor válido!!!\n");
+                }
+            }
         }
     }
 }
